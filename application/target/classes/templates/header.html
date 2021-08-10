@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <title>Header Template</title>
+</head>
+<body>
+
+        <nav th:fragment="header">
+
+            <!--<h2> Welcome to Car Rental App </h2> -->
+
+            <!--<img th:src="@{images/car2.png}">-->
+
+            <ul>
+
+                <a th:href="@{init}" class="logo">
+                    <img th:src="@{/images/logo2.png}" id="logo" alt="logo">
+                </a>
+
+                <li>
+                    <a th:href="@{init}" class="active"> Home </a>
+                </li>
+
+                <li>
+                    <a th:href="@{register}" class="button1">
+                        Register
+                    </a>
+                </li>
+
+                <li>
+                    <a th:href="@{items}" class="button2">
+                        Cars
+                    </a>
+                </li>
+
+                <li>
+                    <a th:href="@{about}" class="button3"> About </a>
+                </li>
+
+                <li>
+                    <a th:href="@{contact}" class="button4"> Contact </a>
+                </li>
+
+            </ul>
+        </nav>
+        <section>
+            <img src="/starsHeader.png" id="stars">
+        </section>
+
+</body>
+</html>
+

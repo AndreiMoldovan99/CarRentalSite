@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+body {
+    background: linear-gradient(#2a6693, #1c9c95);
+
+}
+
+.table{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 88%;
+    margin-left: 0px;
+
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c9c95, transparent);
+    z-index: 1000;
+    margin-left: -50px;
+
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+#sun {
+    mix-bottom: screen;
+}
+
+section img #car {
+    z-index: 10;
+}
+
+#text {
+    position: absolute;
+    color: #2a6693;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    text-shadow: 5px 5px 0 #fff;
+
+}
+
+#btnn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2a6693;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(185px);
+    scroll-behavior: smooth;
+    margin-top: 0px;
+}
+
+#sec {
+    scroll-behavior: smooth;
+
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c9c95;
+    scroll-behavior: smooth;
+
+}
+
+.sec h3 {
+    margin-top: -40px;
+    margin-left: 0px;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+table {
+    font-size: 1.1em;
+    color: #fff;
+
+}
+
+section a {
+    scroll-behavior: smooth;
+}
+

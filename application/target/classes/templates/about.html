@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/footer_about.css}">
+    <link rel="stylesheet" th:href="@{/css/about.css}">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div th:insert="~{header::header}"></div>
+
+        <h1> About Our Web Page </h1>
+        <hr>
+
+        <p>The idea of the program follows the flow of a car rental website which allows users to register as local car dealers in their area, becoming visible to the rest
+            of the customers and being able to list up their own cars for leasing, as well as renting someone else's car. The registration is based on simple steps. Firstly,
+            the new user has to enter their first name, last name and contact data such as home/mobile phone and their email/Gmail address. There is no requirement for
+            password, as all customers by the website’s nature are brought into contact with their dealers via either phone or email.<br><br>The rental process in itself
+            requires the buyer to check a dealer’s available car park, from which he should pick then the vehicle of his choice. Each car has its unvarying price,
+            picked by the person who listed it up. We would like to draw your attention to the fact that the website administrators have no implication in choosing fees.
+            The final value is completely up to each and every dealer and can be later changed by them, should they wish to do so in the update process, which is an
+            available feature of our application.<br><br>After picking a car, the renter is required to choose the number of days he would like the borrow the car for, adjusting
+            the final price according to the choice. Please note that each dealer will have a mentioned time of availability for their vehicle. However, we din not impose
+            strict rules over the time span, and decided to leave eventual negotiations up to the users and their dealers.<br><br>The final step of the process requires the
+            customer to check out with his vehicles of choice, to which the website will redirect them to a secure payment page as they may proceed to enter their credit
+            card details for the payment to be done. In case everything went right, the users will be notified of their success regarding the pay and their dealer will be
+            made aware of their intention.</p>
+
+        <h1> Technical Considerations </h1>
+        <hr class="hr_tech">
+
+        <p>Our Website’s commencement can be dislocated into two branches: the front end of the app, which is what you are seeing now, and the back end of the program,
+            the source code that allows each button to have a tangible functionality.<br><br>The back code was written in Java, aided by the Spring Framework, compiled
+            into Intellij IDEA as our integrated development environment. Below this explanation, you will find an use case diagram which essentially demonstrates how
+            the source program works through different classes, objects and inheritances.<br><br>The front part of the code was designed in HTML with the aid of the
+            Thymeleaf template. We designed the style of the app pages in CSS with an user-friendly environment in mind, conceptualized to facilitate the navigation of
+            our website for every user.<br><br>To make the style of the home page more dynamic, we used JavaScript for the parallax effect as a final spin of our front
+            end.</p>
+
+        <h1> Class Diagram  </h1>
+        <hr class="hr_diag">
+
+        <img th:src="@{/images/ClassDiagram.png}" id="diagram" alt="diagram">
+    <div th:insert="~{footer::footer}"></div>
+</body>
+</html>

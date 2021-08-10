@@ -1,0 +1,95 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/footer_home.css}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Home Page</title>
+</head>
+<body>
+
+
+    <div th:insert="~{header::header}">
+
+    </div>
+
+
+    <section>
+        <!--<img th:src="@{/images/background.jpeg}" src="../static/images/background.jpeg" id="background" alt="back">-->
+        <img th:src="@{/images/background5.jpg}" src="../static/images/background.jpeg" id="background" alt="back">
+        <!--<img th:src="@{/images/sun2.png}" id="sun" alt="sun">-->
+        <h2 id="text"> Car Rental </h2>
+        <a href="#sec" id="btnn"> Explore Available Dealers </a>
+        <!--<img th:src="@{/images/car6.png}" id="car" alt="car">-->
+        <img th:src="@{/images/car9.png}" id="car" alt="car">
+
+    </section>
+
+
+    <!--
+    <div class="sec">
+
+    </div>
+    -->
+
+    <div class="sec" id="sec">
+
+        <h3 class="h">Dealers with ready for renting cars:</h3>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th> First Name </th>
+                    <th> Last Name </th>
+                    <th> Email </th>
+                    <th> Phone </th>
+                    <th> Address </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="a:${customers}">
+                    <td th:text="${a.firstname}"></td>
+                    <td th:text="${a.lastname}"></td>
+                    <td th:text="${a.email}"></td>
+                    <td th:text="${a.phone}"></td>
+                    <td th:text="${a.address}"></td>
+                    <td>
+                        <a th:href="@{rent(customer=${a.lastname})}" class="btn btn-info" id="1">
+                            Check Available Cars
+                        </a>
+
+                        <a th:href="@{updcust(customer=${a.lastname})}" class="btn btn-info">
+                            Update Profile
+                        </a>
+
+                        <a th:href="@{delcust(customer=${a.lastname})}" class="btn btn-danger">
+                            Decline
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        let sun = document.getElementById('sun');
+        let carr = document.getElementById('car');
+        let textt = document.getElementById('text');
+        let btnn = document.getElementById('btnn');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            /*sun.style.left = value * 1.10 + 'px';*/
+            carr.style.top = value * 1.10 + 'px';
+            carr.style.left = value * 2.50 + 'px';
+            /*carr.style.gridRow = value * 1.10 + 'px';*/
+        });
+    </script>
+
+    <div th:insert="~{footer_home::footer}"></div>
+</body>
+</html>

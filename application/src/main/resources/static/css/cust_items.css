@@ -1,0 +1,38 @@
+.title{
+    margin-left:120px;
+    margin-top:20px;
+}
+.back{
+    margin-left:915px;
+    border-radius: 40px;
+}
+
+.add {
+    border-radius: 40px;
+}
+
+
+.rule{
+    margin-left:120px;
+    margin-right:150px;
+}
+
+.table{
+    margin-top:50px;
+    margin-bottom:20px;
+    width:80%;
+    margin-left:170px;
+}
+
+hr {
+    background-color: #fff;
+    width:625px;
+}
+
+h2 {
+    margin-top: -40px;
+    margin-left: 0px;
+    font-size: 3.5em;
+    margin-bottom: 0px;
+    color: #fff;
+}

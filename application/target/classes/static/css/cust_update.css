@@ -1,0 +1,28 @@
+.myform{
+    margin-left: 200px;
+    margin-top: 50px;
+    color: #fff;
+}
+
+h2 {
+    margin-top: 60px;
+    margin-left: 0px;
+    font-size: 2em;
+    margin-bottom: -5px;
+    color: #fff;
+}
+
+hr{
+    width:100px;
+    margin-left:0px;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+.myform .upd {
+    border-radius: 40px;
+}
+
+.myform .back {
+    border-radius: 40px;
+}
